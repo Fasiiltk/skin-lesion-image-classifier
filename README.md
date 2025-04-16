@@ -35,7 +35,7 @@ Skin cancer is one of the most common types of cancer. Early and accurate diagno
 
 ## 🚀 How to Run
 ```bash
-git clone https://github.com/yourusername/skin-cancer-prediction.git
+git clone https://github.com/Fasiiltk/skin-cancer-prediction.git
 cd skin-cancer-prediction
 pip install -r requirements.txt
 python app.py
