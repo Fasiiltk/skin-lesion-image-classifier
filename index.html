@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Skin Cancer Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 py-12 text-white text-center">
+        <h1 class="text-4xl font-bold mb-2">Skin Cancer Detection System</h1>
+        <p class="text-lg">Learn about skin cancer, its types, prevention, and get early predictions through AI.</p>
+    </header>
+
+    <!-- What is Skin Cancer -->
+    <section class="py-10 px-6 md:px-20 bg-white">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <img src="https://images.unsplash.com/photo-1588776814546-bfbcd3cb82a0?auto=format&fit=crop&w=800&q=80" alt="Skin Cancer" class="rounded-lg shadow-md">
+            
+            <div>
+                <h2 class="text-2xl font-bold mb-4">What is Skin Cancer?</h2>
+                <p class="text-gray-700 text-lg">
+                    Skin cancer is the abnormal growth of skin cells, often caused by excessive exposure to ultraviolet (UV) rays from the sun or tanning beds. 
+                    It can occur anywhere on the body, but most commonly appears on sun-exposed areas such as the face, neck, and arms.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Skin Cancer -->
+    <section class="py-10 px-6 md:px-20 bg-gray-50">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Types of Skin Cancer</h2>
+                <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
+                    <li><strong>Basal Cell Carcinoma (BCC)</strong>: The most common type, usually non-lethal but requires treatment.</li>
+                    <li><strong>Squamous Cell Carcinoma (SCC)</strong>: More likely to spread if untreated.</li>
+                    <li><strong>Melanoma</strong>: The most dangerous form that can spread rapidly.</li>
+                </ul>
+            </div>
+            <img src="https://images.unsplash.com/photo-1638293713162-0aa6c9887f5e?auto=format&fit=crop&w=800&q=60" alt="Types of Skin Cancer" class="rounded-lg shadow-md">
+        </div>
+    </section>
+
+    <!-- Prevention Tips -->
+    <section class="py-10 px-6 md:px-20 bg-white">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <img src="https://images.unsplash.com/photo-1588777072097-2918a1c60ea7?auto=format&fit=crop&w=800&q=60" alt="Prevention" class="rounded-lg shadow-md">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">How to Prevent Skin Cancer</h2>
+                <ul class="list-disc pl-6 text-gray-700 text-lg space-y-2">
+                    <li>Use sunscreen with SPF 30 or higher.</li>
+                    <li>Avoid tanning beds and excessive sun exposure.</li>
+                    <li>Wear protective clothing and sunglasses.</li>
+                    <li>Examine your skin regularly for unusual changes.</li>
+                    <li>Consult a dermatologist for routine checkups.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="py-12 px-6 md:px-20 bg-gray-100 text-center">
+        <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Upload a Skin Image for Prediction</h2>
+            <form action="/predict" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <label for="file" class="block text-left text-sm font-medium text-gray-700">Choose an image:</label>
+                <input 
+                    type="file" 
+                    name="file" 
+                    id="file" 
+                    required 
+                    accept="image/*"
+                    class="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
+                >
+                    Predict
+                </button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
